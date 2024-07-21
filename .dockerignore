@@ -1,0 +1,40 @@
+# Ignore version control system files
+.git
+.gitignore
+
+# Ignore Docker related files
+.dockerignore
+Dockerfile
+
+# Ignore development and IDE files
+.vscode
+.idea
+
+# Ignore Python bytecode files
+*.pyc
+__pycache__
+.ruff_cache/
+
+# SQLite DB
+test.db
+
+# Folders to ignore
+middleware/
+archive/
+files/
+
+# Ignore virtual environment folders
+venv/
+.venv/
+
+# Ignore local development files
+.vscode/
+.idea/
+*.pyc
+
+# Ignore markdown files
+*.md
+
+# Other files
+*.pdf
+*.ipynb

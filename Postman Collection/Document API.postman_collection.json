@@ -1,0 +1,119 @@
+{
+	"info": {
+		"_postman_id": "7a13512d-3fb8-43be-9f5b-0b8f9cd61beb",
+		"name": "Document API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32698412"
+	},
+	"item": [
+		{
+			"name": "Process Document",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 62a93c4d-8dea-4b24-982b-203a2bdbe254",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/Users/atul/Downloads/pi-rag-assignment/2008.09104v2.pdf"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://{{base_url}}/process-document",
+					"protocol": "http",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"process-document"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Documents",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 709a74cb-0426-42e6-928b-38171f5882b2",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://{{base_url}}/get-documents/?page=1",
+					"protocol": "http",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"get-documents",
+						""
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "per_page",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Document by ID",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 709a74cb-0426-42e6-928b-38171f5882b2",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://{{base_url}}/get-document/1",
+					"protocol": "http",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"get-document",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://your-base-url.com"
+		},
+		{
+			"key": "docId",
+			"value": "1"
+		},
+		{
+			"key": "base_url",
+			"value": "localhost:8000"
+		}
+	]
+}
